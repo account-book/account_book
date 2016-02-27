@@ -7,6 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
+
+ <% if user_signed_in? %>
+     <%= current_user.email %>
+     <%= link_to 'プロフィール変更', edit_user_registration_path %>
+     <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %><br>
+     残高：<%= current_user.init_property %>円
+ <% else %>
+     <%= link_to 'サインアップ', new_user_registration_path %>
+     <%= link_to 'ログイン', new_user_session_path %>
+
+ <% end %>
 
 <%= yield %>
 
