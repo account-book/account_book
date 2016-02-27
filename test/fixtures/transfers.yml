@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  tansfered_at: 2016-02-27
+  transfer_group_id: 1
+  user_id: 1
+  comment: MyString
+  category_id: 1
+
+two:
+  amount: 1
+  tansfered_at: 2016-02-27
+  transfer_group_id: 1
+  user_id: 1
+  comment: MyString
+  category_id: 1

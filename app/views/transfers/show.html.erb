@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @transfer.amount %>
+</p>
+
+<p>
+  <strong>Tansfered at:</strong>
+  <%= @transfer.tansfered_at %>
+</p>
+
+<p>
+  <strong>Transfer group:</strong>
+  <%= @transfer.transfer_group_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @transfer.user_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @transfer.comment %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @transfer.category_id %>
+</p>
+
+<%= link_to 'Edit', edit_transfer_path(@transfer) %> |
+<%= link_to 'Back', transfers_path %>
