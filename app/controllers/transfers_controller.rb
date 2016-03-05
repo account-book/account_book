@@ -25,6 +25,7 @@ class TransfersController < ApplicationController
   # POST /transfers.json
   def create
     @transfer = Transfer.new(transfer_params)
+    @transfer.user_id = current_user.id
 
     respond_to do |format|
       if @transfer.save
