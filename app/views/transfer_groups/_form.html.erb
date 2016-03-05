@@ -1,0 +1,22 @@
+<%= form_for(@transfer_group) do |f| %>
+  <% if @transfer_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transfer_group.errors.count, "error") %> prohibited this transfer_group from being saved:</h2>
+
+      <ul>
+      <% @transfer_group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :label, "購入場所" %><br>
+    <%= f.text_field :place %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
