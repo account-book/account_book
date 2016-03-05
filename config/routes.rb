@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   resources :transfers
+  resources :transfer_groups
+  devise_for :users, controllers: {
+        sessions: 'users/sessions',
+        registrations: 'users/registrations'
+      }
+  root 'home#top'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

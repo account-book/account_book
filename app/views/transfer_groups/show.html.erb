@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @transfer_group.place %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @transfer_group.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_transfer_group_path(@transfer_group) %> |
+<%= link_to 'Back', transfer_groups_path %>
