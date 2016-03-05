@@ -25,6 +25,7 @@ class TransferGroupsController < ApplicationController
   # POST /transfer_groups.json
   def create
     @transfer_group = TransferGroup.new(transfer_group_params)
+    @transfer_group.user_id = current_user.id
 
     respond_to do |format|
       if @transfer_group.save
