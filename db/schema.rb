@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 20160305054012) do
   end
 
   create_table "transfers", force: :cascade do |t|
-    t.integer  "amount",            null: false
-    t.date     "transferred_at"
-    t.integer  "transfer_group_id", null: false
-    t.integer  "user_id",           null: false
+    t.integer  "amount"
+    t.date     "tansfered_at"
+    t.integer  "transfer_group_id"
+    t.integer  "user_id"
     t.string   "comment"
-    t.integer  "category_id",       null: false
+    t.integer  "category_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end

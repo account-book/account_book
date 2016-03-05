@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transfers
   resources :transfer_groups
   devise_for :users, controllers: {
         sessions: 'users/sessions',

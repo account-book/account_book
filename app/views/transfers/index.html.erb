@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Transfers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Tansfered at</th>
+      <th>Transfer group</th>
+      <th>User</th>
+      <th>Comment</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transfers.each do |transfer| %>
+      <tr>
+        <td><%= transfer.amount %></td>
+        <td><%= transfer.tansfered_at %></td>
+        <td><%= transfer.transfer_group_id %></td>
+        <td><%= transfer.user_id %></td>
+        <td><%= transfer.comment %></td>
+        <td><%= transfer.category_id %></td>
+        <td><%= link_to 'Show', transfer %></td>
+        <td><%= link_to 'Edit', edit_transfer_path(transfer) %></td>
+        <td><%= link_to 'Destroy', transfer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transfer', new_transfer_path %>

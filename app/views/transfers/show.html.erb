@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>金額:</strong>
+  <%= @transfer.amount %>
+</p>
+
+<p>
+  <strong>日付:</strong>
+  <%= @transfer.tansfered_at %>
+</p>
+
+<p>
+  <strong>Transfer group:</strong>
+  <%= @transfer.transfer_group_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @transfer.user_id %>
+</p>
+
+<p>
+  <strong>コメント:</strong>
+  <%= @transfer.comment %>
+</p>
+
+<p>
+  <strong>カテゴリー:</strong>
+  <%= @transfer.category_id %>
+</p>
+
+<%= link_to '編集する', edit_transfer_path(@transfer) %> |
+<%= link_to '戻る', transfers_path %>
