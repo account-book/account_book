@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227074618) do
+ActiveRecord::Schema.define(version: 20160305054012) do
+
+  create_table "transfer_groups", force: :cascade do |t|
+    t.string   "place"
+    t.integer  "user_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transfers", force: :cascade do |t|
+    t.integer  "amount",            null: false
+    t.date     "transferred_at"
+    t.integer  "transfer_group_id", null: false
+    t.integer  "user_id",           null: false
+    t.string   "comment"
+    t.integer  "category_id",       null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

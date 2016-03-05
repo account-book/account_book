@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Transfer Groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transfer_groups.each do |transfer_group| %>
+      <tr>
+        <td><%= transfer_group.place %></td>
+        <td><%= transfer_group.user_id %></td>
+        <td><%= link_to 'Show', transfer_group %></td>
+        <td><%= link_to 'Edit', edit_transfer_group_path(transfer_group) %></td>
+        <td><%= link_to 'Destroy', transfer_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transfer group', new_transfer_group_path %>
